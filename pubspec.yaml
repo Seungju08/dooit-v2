@@ -63,4 +63,4 @@ flutter:
 
     - family: HSSanTokki
       fonts:
-        - asset: assets/fonts/HSSanTokki.ttf
+        - asset: assets/fonts/HSSantokki-Regular.ttf
