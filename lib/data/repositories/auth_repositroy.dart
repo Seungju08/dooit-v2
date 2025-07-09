@@ -44,8 +44,8 @@ class AuthRepository {
       }),
     );
 
-    /// 로그인에 성공했을 때 로직
     if (response.statusCode == 200) {
+      // 로그인에 성공했을 때 로직
       final responseData = jsonDecode(response.body); // json 파싱
       await pref
         ..setString('access_token', responseData['data']['access_token'])
@@ -58,6 +58,12 @@ class AuthRepository {
         context,
         MaterialPageRoute(builder: (context) => MainScreen()),
       ); // 메인 페이지로 이동
+    } else {
+      // 로그인에 실패했을 때 로직
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => SignInScreen()),
+      ); // 초기 토큰이 유효한지 판별 후 로그인 화면으로 이동시켜주기 위해 필요
     }
   }
 

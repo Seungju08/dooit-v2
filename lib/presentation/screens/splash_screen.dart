@@ -1,3 +1,4 @@
+import 'package:dooit/data/repositories/auth_repositroy.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -8,9 +9,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  AuthRepository authRepository = AuthRepository();
+
   @override
   void initState() {
     super.initState();
+    authRepository.sendTokenToServer(context);
   }
 
   @override
