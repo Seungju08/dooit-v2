@@ -99,9 +99,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             SizedBox(height: 15),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[0] = true;
-                });
+                notificationProvider.read(0);
               },
               child: Container(
                 width: double.infinity,
@@ -173,9 +171,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[1] = true;
-                });
+                notificationProvider.read(1);
               },
               child: Container(
                 width: double.infinity,
@@ -247,9 +243,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[2] = true;
-                });
+                notificationProvider.read(2);
               },
               child: Container(
                 width: double.infinity,
@@ -337,9 +331,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[3] = true;
-                });
+                notificationProvider.read(3);
               },
               child: Container(
                 width: double.infinity,
@@ -402,9 +394,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[4] = true;
-                });
+                notificationProvider.read(4);
               },
               child: Container(
                 width: double.infinity,
@@ -476,9 +466,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[5] = true;
-                });
+                notificationProvider.read(5);
               },
               child: Container(
                 width: double.infinity,
@@ -550,9 +538,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
             GestureDetector(
               onTap: () {
-                setState(() {
-                  notificationProvider.isRead[6] = true;
-                });
+                notificationProvider.read(6);
               },
               child: Container(
                 width: double.infinity,

@@ -2,7 +2,7 @@ import 'package:dooit/presentation/screens/challenge_screen.dart';
 import 'package:dooit/presentation/screens/community_screen.dart';
 import 'package:dooit/presentation/screens/home_screen.dart';
 import 'package:dooit/presentation/screens/map_screen.dart';
-import 'package:dooit/presentation/screens/my_page_screen.dart';
+import 'package:dooit/presentation/screens/my_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     CommunityScreen(),
     MapScreen(),
     ChallengeScreen(),
-    MyPageScreen(),
+    MyScreen(),
   ];
 
   @override
