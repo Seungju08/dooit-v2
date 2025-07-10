@@ -1,8 +1,8 @@
 import 'package:dooit/presentation/screens/challenge_screen.dart';
-import 'package:dooit/presentation/screens/community_screen.dart';
-import 'package:dooit/presentation/screens/home_screen.dart';
+import 'package:dooit/presentation/screens/community/community_screen.dart';
+import 'package:dooit/presentation/screens/home/home_screen.dart';
 import 'package:dooit/presentation/screens/map_screen.dart';
-import 'package:dooit/presentation/screens/my_screen.dart';
+import 'package:dooit/presentation/screens/my/my_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

@@ -1,13 +1,12 @@
 import 'package:dooit/data/repositories/auth_repositroy.dart';
-import 'package:dooit/presentation/componets/custom_card_icon.dart';
-import 'package:dooit/presentation/componets/my_list_1.dart';
-import 'package:dooit/presentation/componets/my_list_2.dart';
-import 'package:dooit/presentation/componets/my_list_3.dart';
-import 'package:dooit/presentation/componets/my_list_4.dart';
-import 'package:dooit/presentation/screens/notification_screen.dart';
+import 'package:dooit/presentation/screens/my/widgets/custom_card_icon.dart';
+import 'package:dooit/presentation/screens/my/widgets/my_list_1.dart';
+import 'package:dooit/presentation/screens/my/widgets/my_list_3.dart';
+import 'package:dooit/presentation/screens/my/widgets/my_list_2.dart';
+import 'package:dooit/presentation/screens/my/widgets/my_list_4.dart';
 import 'package:flutter/material.dart';
 
-import '../providers/notification_provider.dart';
+import '../../providers/notification_provider.dart';
 
 class MyScreen extends StatefulWidget {
   const MyScreen({super.key});

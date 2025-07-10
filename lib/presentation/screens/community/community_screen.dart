@@ -1,8 +1,9 @@
+import 'package:dooit/presentation/screens/community/widgets/custom_talk_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../providers/notification_provider.dart';
-import 'notification_screen.dart';
+import '../../providers/notification_provider.dart';
+import '../notification_screen.dart';
 
 class CommunityScreen extends StatefulWidget {
   const CommunityScreen({super.key});
@@ -71,7 +72,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
@@ -107,7 +108,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -583,11 +584,11 @@ class _CommunityScreenState extends State<CommunityScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
                   children: [
                     Column(
@@ -600,7 +601,13 @@ class _CommunityScreenState extends State<CommunityScreen> {
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.green, width: 3),
                           ),
-                          child: Image.asset('assets/images/window.png'),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/window.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                          ),
                         ),
                         SizedBox(height: 10),
                         Text(
@@ -626,6 +633,13 @@ class _CommunityScreenState extends State<CommunityScreen> {
                             border: Border.all(
                               color: Colors.transparent,
                               width: 3,
+                            ),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/coffee.png',
+                              width: 60,
+                              height: 60,
                             ),
                           ),
                         ),
@@ -655,6 +669,13 @@ class _CommunityScreenState extends State<CommunityScreen> {
                               width: 3,
                             ),
                           ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/chick.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                          ),
                         ),
                         SizedBox(height: 10),
                         Text(
@@ -680,6 +701,13 @@ class _CommunityScreenState extends State<CommunityScreen> {
                             border: Border.all(
                               color: Colors.transparent,
                               width: 3,
+                            ),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/clover.png',
+                              width: 50,
+                              height: 50,
                             ),
                           ),
                         ),
@@ -709,6 +737,13 @@ class _CommunityScreenState extends State<CommunityScreen> {
                               width: 3,
                             ),
                           ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/two_people.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                          ),
                         ),
                         SizedBox(height: 10),
                         Text(
@@ -726,13 +761,33 @@ class _CommunityScreenState extends State<CommunityScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Container(
               width: double.infinity,
-              height: 500,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(35)),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Column(
+                  children: List.generate(
+                    10,
+                    (index) => Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: CustomTalkCard(),
+                        ),
+                        Divider(
+                          color: Colors.grey.shade300,
+                          indent: 25,
+                          endIndent: 25,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ],

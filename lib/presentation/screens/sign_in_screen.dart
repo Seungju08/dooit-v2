@@ -14,18 +14,13 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final screenWidth = size.width;
-    final buttonWidth = screenWidth * 0.85;
-    final buttonHeight = 55.0;
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 240),
+            const SizedBox(height: 230),
             Text(
               'Dooit',
               style: TextStyle(
@@ -35,31 +30,39 @@ class _SignInScreenState extends State<SignInScreen> {
                 fontWeight: FontWeight.w800,
               ),
             ),
-            const SizedBox(height: 180),
+            const SizedBox(height: 200),
             GestureDetector(
               onTap: () {},
               child: Container(
-                width: buttonWidth,
-                height: buttonHeight,
+                width: 350,
+                height: 55,
                 decoration: BoxDecoration(
                   color: Color(0xff03C75B),
                   borderRadius: BorderRadius.circular(100),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset('assets/images/logo/naver.svg'),
-                    SizedBox(width: 10),
-                    Text(
-                      '네이버로 시작하기',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                        fontFamily: 'Pretendard',
-                        fontWeight: FontWeight.w500,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 23),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset('assets/images/logo/naver.svg'),
+                      Spacer(),
+                      Text(
+                        '네이버로 시작하기',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontFamily: 'Pretendard',
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                  ],
+                      Spacer(),
+                      SvgPicture.asset(
+                        'assets/images/logo/naver.svg',
+                        color: Colors.transparent,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -69,27 +72,35 @@ class _SignInScreenState extends State<SignInScreen> {
                 authRepository.loginWithKakao(context);
               },
               child: Container(
-                width: buttonWidth,
-                height: buttonHeight,
+                width: 350,
+                height: 55,
                 decoration: BoxDecoration(
                   color: Color(0xffFDE500),
                   borderRadius: BorderRadius.circular(100),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset('assets/images/logo/kakao.svg'),
-                    SizedBox(width: 10),
-                    Text(
-                      '카카오로 시작하기',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 17,
-                        fontFamily: 'Pretendard',
-                        fontWeight: FontWeight.w500,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset('assets/images/logo/kakao.svg'),
+                      Spacer(),
+                      Text(
+                        '카카오로 시작하기',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontFamily: 'Pretendard',
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                  ],
+                      Spacer(),
+                      SvgPicture.asset(
+                        'assets/images/logo/kakao.svg',
+                        color: Colors.transparent,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -97,28 +108,36 @@ class _SignInScreenState extends State<SignInScreen> {
             GestureDetector(
               onTap: () {},
               child: Container(
-                width: buttonWidth,
-                height: buttonHeight,
+                width: 350,
+                height: 55,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Color(0xffD8D8D8)),
                   borderRadius: BorderRadius.circular(100),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset('assets/images/logo/google.svg'),
-                    SizedBox(width: 10),
-                    Text(
-                      'Google로 시작하기',
-                      style: TextStyle(
-                        color: Color(0xff171717),
-                        fontSize: 17,
-                        fontFamily: 'Pretendard',
-                        fontWeight: FontWeight.w500,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset('assets/images/logo/google.svg'),
+                      Spacer(),
+                      Text(
+                        'Google로 시작하기',
+                        style: TextStyle(
+                          color: Color(0xff171717),
+                          fontSize: 17,
+                          fontFamily: 'Pretendard',
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                  ],
+                      Spacer(),
+                      SvgPicture.asset(
+                        'assets/images/logo/google.svg',
+                        color: Colors.transparent,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

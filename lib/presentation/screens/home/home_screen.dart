@@ -1,5 +1,5 @@
-import 'package:dooit/presentation/componets/custom_dotted_graph.dart';
-import 'package:dooit/presentation/componets/custom_swiper.dart';
+import 'package:dooit/presentation/screens/home/widgets/custom_dotted_graph.dart';
+import 'package:dooit/presentation/screens/home/widgets/custom_swiper.dart';
 import 'package:dooit/presentation/providers/notification_provider.dart';
 import 'package:dooit/presentation/screens/notification_screen.dart';
 import 'package:dotted_border/dotted_border.dart';
