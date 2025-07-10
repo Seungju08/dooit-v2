@@ -42,7 +42,12 @@ class MyList2 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/star.svg',
+                        width: 22,
+                        height: 22,
+                      ),
+                      SizedBox(width: 11),
                       Text(
                         '두잇 랭크',
                         style: TextStyle(
@@ -78,7 +83,12 @@ class MyList2 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/lightning.svg',
+                        width: 23,
+                        height: 23,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '명예의 전당',
                         style: TextStyle(

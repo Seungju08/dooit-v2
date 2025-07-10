@@ -320,7 +320,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 30),
             CustomDottedGraph(),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(

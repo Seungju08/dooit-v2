@@ -45,5 +45,21 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	  <key>NSAppTransportSecurity</key>
+      <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+      </dict>
+
+	  <key>NSLocationWhenInUseUsageDescription</key>
+      <string>현재 위치 정보를 사용하여 지도 중심을 이동합니다.</string>
+
+      <key>NSLocationAlwaysUsageDescription</key>
+      <string>앱이 백그라운드일 때도 위치를 사용합니다.</string>
+
+      <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+      <string>앱이 실행 중이거나 백그라운드일 때 위치를 사용합니다.</string>
+
 </dict>
 </plist>

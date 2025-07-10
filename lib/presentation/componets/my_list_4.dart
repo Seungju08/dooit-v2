@@ -47,7 +47,12 @@ class MyList4 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/headset.svg',
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '고객센터',
                         style: TextStyle(

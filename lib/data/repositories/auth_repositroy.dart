@@ -71,10 +71,14 @@ class AuthRepository {
   Future<void> logOut(BuildContext context) async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     final refresh_token = pref.getString('refresh_token');
+    final access_token = pref.getString('access_token');
 
     final response = await http.post(
-      Uri.parse('/api/auth/logout'),
-      headers: {'Content-Type': 'application/json'},
+      Uri.parse('https://be-production-e1c4.up.railway.app/api/auth/logout'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $access_token',
+      },
       body: jsonEncode({'refresh_token': refresh_token}),
     );
 

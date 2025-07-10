@@ -42,7 +42,12 @@ class MyList3 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/star.svg',
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(width: 8),
                       Text(
                         '이벤트',
                         style: TextStyle(
@@ -78,7 +83,12 @@ class MyList3 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/document.svg',
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '두잇 가이드',
                         style: TextStyle(
@@ -114,7 +124,12 @@ class MyList3 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/speaker.svg',
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '공지사항',
                         style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:dooit/data/repositories/auth_repositroy.dart';
 import 'package:dooit/presentation/componets/custom_card_icon.dart';
 import 'package:dooit/presentation/componets/my_list_1.dart';
 import 'package:dooit/presentation/componets/my_list_2.dart';
@@ -16,6 +17,8 @@ class MyScreen extends StatefulWidget {
 }
 
 class _MyScreenState extends State<MyScreen> {
+  AuthRepository authRepository = AuthRepository();
+
   void updateScreen() => setState(() {});
 
   @override
@@ -46,31 +49,9 @@ class _MyScreenState extends State<MyScreen> {
                   Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NotificationScreen(),
-                        ),
-                      );
+                      authRepository.logOut(context);
                     },
-                    child: Stack(
-                      children: [
-                        Icon(Icons.notifications, color: Colors.grey, size: 30),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: Container(
-                            width: 7,
-                            height: 7,
-                            decoration: BoxDecoration(
-                              color: notificationProvider.isRead.contains(false)
-                                  ? Colors.red
-                                  : Colors.transparent,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    child: Icon(Icons.settings, size: 30, color: Colors.grey),
                   ),
                 ],
               ),
@@ -88,6 +69,10 @@ class _MyScreenState extends State<MyScreen> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/profile.png'),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -115,7 +100,7 @@ class _MyScreenState extends State<MyScreen> {
                         ),
                         SizedBox(height: 10),
                         Container(
-                          width: 65,
+                          width: 70,
                           height: 33,
                           decoration: BoxDecoration(
                             color: Colors.white,
@@ -125,6 +110,7 @@ class _MyScreenState extends State<MyScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Image.asset('assets/images/star.png', width: 20),
                               Text(
                                 '0',
                                 style: TextStyle(

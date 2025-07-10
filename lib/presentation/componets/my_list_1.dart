@@ -42,7 +42,12 @@ class MyList1 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/pen.svg',
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '내가 쓴 리뷰',
                         style: TextStyle(
@@ -109,7 +114,12 @@ class MyList1 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/card.svg',
+                        width: 15,
+                        height: 15,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '결제 내역',
                         style: TextStyle(
@@ -145,7 +155,12 @@ class MyList1 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 10),
                   child: Row(
                     children: [
-                      // Image.asset(''),
+                      SvgPicture.asset(
+                        'assets/icons/challenge.svg',
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(width: 10),
                       Text(
                         '관심 두잇존',
                         style: TextStyle(
