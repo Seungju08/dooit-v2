@@ -54,6 +54,8 @@ class AuthRepository {
           responseData['data']['refresh_token'],
         ); // SharedPreference에 토큰과 리프레시 토큰 저장
 
+      print('access_token: ${responseData['data']['access_token']}');
+
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => MainScreen()),

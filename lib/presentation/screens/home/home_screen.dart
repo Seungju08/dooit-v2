@@ -1,8 +1,9 @@
+import 'package:dooit/data/repositories/exer_repository.dart';
+import 'package:dooit/presentation/providers/home_provider.dart';
 import 'package:dooit/presentation/screens/home/widgets/custom_dotted_graph.dart';
 import 'package:dooit/presentation/screens/home/widgets/custom_swiper.dart';
 import 'package:dooit/presentation/providers/notification_provider.dart';
 import 'package:dooit/presentation/screens/notification_screen.dart';
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,10 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     notificationProvider.addListener(updateScreen);
+    homeProvider.addListener(updateScreen);
+    print(exerRepository.exerModel?.weekStats);
+    homeProvider.getTime();
   }
 
   @override
   void dispose() {
+    homeProvider.removeListener(updateScreen);
     notificationProvider.removeListener(updateScreen);
     super.dispose();
   }
@@ -93,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         SizedBox(height: 60),
                         Text(
-                          '07.08.화',
+                          exerRepository.exerModel?.daily ?? '',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -266,7 +271,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Text(
-                        '00m 00s',
+                        exerRepository.formatMinutesToFixedHourMinute(
+                          exerRepository.exerModel?.weekStat.time ?? 0,
+                        ),
                         style: TextStyle(
                           color: Color(0xff171717),
                           fontSize: 35,
@@ -275,7 +282,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Text(
-                        '이번 주 운동 기록이 없어요 😒',
+                        exerRepository.getWeeklyExerciseMessage(
+                          exerRepository.exerModel?.weekStat.time ?? 0,
+                        ),
                         style: TextStyle(
                           color: Colors.grey.shade600,
                           fontSize: 15,
@@ -341,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(width: 2),
                       Text(
-                        '하루 평균 운동 시간',
+                        '이번 주 평균 운동 시간',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 15,
@@ -351,7 +360,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Spacer(),
                       Text(
-                        '운동 기록이 없어요',
+                        (exerRepository
+                                        .exerModel
+                                        ?.weeklyDailyAverageWorkoutDuration ??
+                                    0) ==
+                                0
+                            ? '운동 기록이 없어요'
+                            : exerRepository.formatMinutesToFixedHourMinute(
+                                exerRepository
+                                    .exerModel!
+                                    .weeklyDailyAverageWorkoutDuration,
+                              ),
                         style: TextStyle(
                           color: Colors.grey.shade800,
                           fontSize: 15,
@@ -384,7 +403,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 30,
                       ),
                       Text(
-                        '최대 집중 시간',
+                        '이번 주 최대 운동 시간',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 15,
@@ -394,7 +413,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Spacer(),
                       Text(
-                        '운동 기록이 없어요',
+                        (exerRepository.exerModel?.weeklyMaxWorkoutDuration ??
+                                    0) ==
+                                0
+                            ? '운동 기록이 없어요'
+                            : exerRepository.formatMinutesToFixedHourMinute(
+                                exerRepository
+                                    .exerModel!
+                                    .weeklyMaxWorkoutDuration,
+                              ),
                         style: TextStyle(
                           color: Colors.grey.shade800,
                           fontSize: 15,

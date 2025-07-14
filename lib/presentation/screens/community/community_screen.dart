@@ -177,7 +177,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '헬신이 알려주는 운동루틴',
+                                  '진짜 뭐냐',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -187,7 +187,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 ),
                                 SizedBox(height: 5),
                                 Text(
-                                  '헬신이 알려주는 운동루틴',
+                                  '오늘 의성 체육관에',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 13,
