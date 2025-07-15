@@ -80,7 +80,7 @@ class _MyScreenState extends State<MyScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Lv.1',
+                          'Lv.30',
                           style: TextStyle(
                             color: Color(0xff582CBD),
                             fontSize: 20,
@@ -111,7 +111,7 @@ class _MyScreenState extends State<MyScreen> {
                             children: [
                               Image.asset('assets/images/star.png', width: 20),
                               Text(
-                                '0',
+                                '27',
                                 style: TextStyle(
                                   color: Color(0xff171717),
                                   fontSize: 15,
@@ -145,7 +145,7 @@ class _MyScreenState extends State<MyScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                '0',
+                                '80',
                                 style: TextStyle(
                                   color: Color(0xff171717),
                                   fontSize: 15,

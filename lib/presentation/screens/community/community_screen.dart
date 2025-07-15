@@ -177,7 +177,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '진짜 뭐냐',
+                                  '집 가고 싶은사람',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -187,7 +187,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 ),
                                 SizedBox(height: 5),
                                 Text(
-                                  '오늘 의성 체육관에',
+                                  '아 아무것도 하기 싫다',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 13,
@@ -196,7 +196,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                   ),
                                 ),
                                 Text(
-                                  '헬신이 알려주는 운동루틴',
+                                  '집에서 놀고 싶어요',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 13,
@@ -282,7 +282,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '헬신이 알려주는 운동루틴',
+                                  '운동횟수',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -292,7 +292,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 ),
                                 SizedBox(height: 5),
                                 Text(
-                                  '헬신이 알려주는 운동루틴',
+                                  '대근육: 고중량으로 3~8회 가능한 세트로 3세트',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 13,
@@ -301,7 +301,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                   ),
                                 ),
                                 Text(
-                                  '헬신이 알려주는 운동루틴',
+                                  '대근육 외 다른 근육: 저중량...',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 13,

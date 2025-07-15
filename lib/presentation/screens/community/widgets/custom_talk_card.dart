@@ -58,7 +58,7 @@ class CustomTalkCard extends StatelessWidget {
                                     ),
                                     SizedBox(width: 2),
                                     Text(
-                                      'Lv.900',
+                                      'Lv.500',
                                       style: TextStyle(
                                         color: Color(0xff582CBD),
                                         fontSize: 14,
@@ -144,7 +144,7 @@ class CustomTalkCard extends StatelessWidget {
                       color: Colors.grey.shade400,
                     ),
                     SizedBox(width: 2),
-                    Text('1'),
+                    Text('138'),
                     SizedBox(width: 7),
                     SvgPicture.asset(
                       'assets/icons/community.svg',
@@ -153,7 +153,7 @@ class CustomTalkCard extends StatelessWidget {
                       color: Colors.grey.shade400,
                     ),
                     SizedBox(width: 2),
-                    Text('0'),
+                    Text('49'),
                     SizedBox(width: 7),
                     SvgPicture.asset(
                       'assets/icons/heart.svg',
@@ -162,7 +162,7 @@ class CustomTalkCard extends StatelessWidget {
                       color: Colors.grey.shade400,
                     ),
                     SizedBox(width: 2),
-                    Text('1'),
+                    Text('90'),
                   ],
                 ),
               ],

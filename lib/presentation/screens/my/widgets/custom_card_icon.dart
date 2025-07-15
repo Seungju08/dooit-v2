@@ -1,3 +1,4 @@
+import 'package:dooit/presentation/screens/exchange_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardIcon extends StatelessWidget {
@@ -13,7 +14,12 @@ class CustomCardIcon extends StatelessWidget {
           Column(
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ExchangeScreen()),
+                  );
+                },
                 child: Container(
                   width: 80,
                   height: 80,
